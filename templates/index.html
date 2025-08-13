@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vanilla Bank</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Vanilla Bank</h1>
+
+    <div id="auth">
+      <div id="welcome" class="hidden">
+        <p>Signed in as <span id="userName"></span></p>
+        <button id="logoutBtn">Logout</button>
+      </div>
+
+      <div id="loginBlock">
+        <input id="username" placeholder="Username" />
+        <input id="password" type="password" placeholder="Password" />
+        <button id="loginBtn">Login</button>
+        <button id="registerBtn">Register</button>
+        <div id="authMsg" class="msg"></div>
+      </div>
+    </div>
+
+    <div id="dashboard" class="hidden">
+      <h2>Account</h2>
+      <div class="card">
+        <div>Balance: $<span id="balance">0.00</span></div>
+        <div class="actions">
+          <input id="amount" placeholder="Amount e.g. 10.50" />
+          <button id="depositBtn">Deposit</button>
+          <button id="withdrawBtn">Withdraw</button>
+        </div>
+        <div class="actions">
+          <input id="toUser" placeholder="Transfer to username" />
+          <input id="transferAmount" placeholder="Amount" />
+          <button id="transferBtn">Transfer</button>
+        </div>
+      </div>
+
+      <h3>Recent Transactions</h3>
+      <ul id="txList"></ul>
+      <div id="dashMsg" class="msg"></div>
+    </div>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
